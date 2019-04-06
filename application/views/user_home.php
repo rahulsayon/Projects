@@ -33,7 +33,8 @@
 				<td><?php echo $value['pwd'] ;   ?></td> 
 				<td><?php echo $value['city'];  ?></td> 
 				<td>
-					<a href="update.php"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+					<a href="<?php echo base_url() . 'my/update/' . $value['id']; ?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+
 					<a href="<?php echo base_url() . 'my/delete/' . $value['id']; ?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
 				</td>
 			</tr>

@@ -130,6 +130,27 @@ class My extends CI_Controller {
 
           $this->load->view('user_home',$data);
       }
+
+      function update($id){
+           
+          $idd =   $this->uri->segment(3);
+
+
+          $this->db->where('id' , $idd);
+         $dataa =  $this->db->get('register');
+          $da['res']  =  $dataa->result();
+          $this->load->view('update' , $da);
+      }
+
+      function delete($id){
+           
+          $idd =   $this->uri->segment(3);
+
+
+          $this->db->where('id' , $idd);
+         $dataa =  $this->db->delete('register');
+         
+      }
 }
 
 
